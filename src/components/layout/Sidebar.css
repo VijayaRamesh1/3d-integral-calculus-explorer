@@ -1,0 +1,217 @@
+.sidebar {
+  width: 300px;
+  height: 100%;
+  background-color: var(--secondary-dark);
+  padding: 20px;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto;
+}
+
+.sidebar.mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 85%;
+  max-width: 350px;
+  height: 100vh;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.control-section {
+  margin-bottom: 30px;
+}
+
+.control-section h3 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  border-bottom: 1px solid var(--primary-blue);
+  padding-bottom: 8px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-dark);
+  color: var(--text-light);
+  font-family: monospace;
+}
+
+.preset-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.preset-button {
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.preset-button:hover {
+  background-color: var(--accent-teal);
+}
+
+.toggle-group {
+  margin-bottom: 15px;
+}
+
+.toggle, .radio {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.toggle input, .radio input {
+  margin-right: 10px;
+}
+
+.toggle-label, .radio-label {
+  color: var(--text-light);
+}
+
+.slider-group {
+  margin-bottom: 15px;
+}
+
+.slider-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--text-light);
+}
+
+.slider-group input {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.results-section {
+  background-color: var(--primary-dark);
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.result-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: var(--text-light);
+}
+
+.result-item .value {
+  font-weight: bold;
+  color: var(--accent-teal);
+}
+
+.button-group {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 15px;
+}
+
+.axis-button {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+  cursor: pointer;
+}
+
+.axis-button.active {
+  background-color: var(--accent-red);
+}
+
+.challenge-section {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.challenge-button, .help-button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.challenge-button {
+  background-color: var(--accent-red);
+  color: var(--text-light);
+}
+
+.help-button {
+  background-color: var(--primary-blue);
+  color: var(--text-light);
+}
+
+/* Styling for input range sliders */
+input[type=range] {
+  -webkit-appearance: none;
+  height: 5px;
+  border-radius: 5px;
+  background: var(--primary-blue);
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--accent-teal);
+  cursor: pointer;
+}
